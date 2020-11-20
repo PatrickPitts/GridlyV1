@@ -2,24 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2155c8ac-607d-4945-8ab9-f78f5b3c2d2d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/maps/dotmm-level1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/maps/downeddragon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/maps/swamptown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BingoList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Grid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GridSelector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/maps/gemstonecave16x16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/maps/hideout35x24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/maps/screamingcauldron.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ApplicationContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GlobalTesting.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GridSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GridSelector.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
@@ -45,6 +44,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -74,15 +74,13 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,6 +113,7 @@
       <workItem from="1603417175525" duration="3723000" />
       <workItem from="1605639524776" duration="16952000" />
       <workItem from="1605749019466" duration="4908000" />
+      <workItem from="1605815730228" duration="20055000" />
     </task>
     <servers />
   </component>
@@ -129,25 +128,33 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="412" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1605759553667" />
-    <state width="1237" height="30" key="GridCell.Tab.0.bottom" timestamp="1605804307983">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1605816070457">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1237" height="30" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605804307983" />
-    <state width="1237" height="30" key="GridCell.Tab.0.center" timestamp="1605804307983">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1605816070457" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1605816070457">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1237" height="30" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605804307983" />
-    <state width="1237" height="30" key="GridCell.Tab.0.left" timestamp="1605804307983">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1605816070457" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1605816070457">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1237" height="30" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605804307983" />
-    <state width="1237" height="30" key="GridCell.Tab.0.right" timestamp="1605804307983">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1605816070457" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1605816070457">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1237" height="30" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605804307983" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1605816070457" />
     <state x="122" y="0" key="SettingsEditor" timestamp="1605814738238">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="122" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1605814738238" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1605835295011">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1605835295011" />
   </component>
 </project>
