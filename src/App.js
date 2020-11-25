@@ -2,15 +2,14 @@ import React, {createContext, useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ApplicationContext from "./ApplicationContext";
-import GridSelector from "./GridSelector";
-import Grid from "./Grid";
-import GlobalTesting from "./GlobalTesting";
+import GridSelector from "./InteractiveGameGrid/GridSelector";
+import Grid from "./InteractiveGameGrid/Grid";
+import {InteractiveMapContext} from "./MapNotesApplication/InteractiveMapContext";
 const App = (props) => {
 
-    const [globalValue, setGlobalValue] = useState("Hello yes I am a global");
     const [selectedMap, setSelectedMap] = useState(null);
-    const [mapNumRows, setMapNumRows] = useState(20);
-    const [mapNumColumns, setMapNumColumns] = useState(20)
+    const [mapNumRows, setMapNumRows] = useState(16);
+    const [mapNumColumns, setMapNumColumns] = useState(16)
 
     const [mainComponent, setMainComponent] = useState(null)
     const [mainComponentSelection, setMainComponentSelection] = useState('SELECTOR');
@@ -35,6 +34,9 @@ const App = (props) => {
                     selectedMap={selectedMap}
                 />);
                 break;
+            case "NOTES":
+
+                break;
             default:
                 setMainComponent(<GridSelector
                     setMainComponentSelection={setMainComponentSelection}
@@ -50,8 +52,27 @@ const App = (props) => {
 
     }, [mainComponentSelection])
 
-    //return(<ApplicationContext value={[globalValue, setGlobalValue]}>mainComponent</ApplicationContext>);
-    return(<ApplicationContext.Provider value={[globalValue, setGlobalValue]}><GlobalTesting/></ApplicationContext.Provider>);
+    return(<ApplicationContext.Provider value={{
+        setMainComponentSelection:setMainComponentSelection,
+        setSelectedMap:setSelectedMap,
+        selectedMap:selectedMap,
+        mapNumColumns:mapNumColumns,
+        mapNumRows:mapNumRows,
+        setMapNumColumns:setMapNumColumns,
+        setMapNumRows:setMapNumRows,
+    }}>
+
+        <InteractiveMapContext.Provider value={{
+            mapNumRows:15,
+            mapNumColumns:15,
+            selectedMap:selectedMap,
+        }}>
+
+            {mainComponent}
+
+        </InteractiveMapContext.Provider>
+
+    </ApplicationContext.Provider>);
 
 }
 

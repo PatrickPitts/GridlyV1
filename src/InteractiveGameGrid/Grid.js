@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react';
-
+import React, {useContext, useEffect, useState} from 'react';
+import ApplicationContext from "../ApplicationContext";
+import GameMasterInfoNode from "../MapNotesApplication/GameMasterInfoNode"
 const GridElement = (props) => {
     const {r, c} = props;
     const [gridElementStyle, setGridElementStyle] = useState(
@@ -12,12 +13,12 @@ const GridElement = (props) => {
         }
     )
     return (<div style={gridElementStyle}
-                 onMouseOver={() => {
-                    setGridElementStyle({...gridElementStyle, backdropFilter:'blur(5px)'})
-                 }}
-                 onMouseLeave={()=>{
-                     setGridElementStyle({...gridElementStyle, backdropFilter:null})
-                 }}
+                 // onMouseOver={() => {
+                 //     setGridElementStyle({...gridElementStyle, backdropFilter: 'blur(5px)'})
+                 // }}
+                 // onMouseLeave={() => {
+                 //     setGridElementStyle({...gridElementStyle, backdropFilter: null})
+                 // }}
     >
     </div>);
 }
@@ -37,7 +38,7 @@ const InfoDisplay = (props) => {
         >
             <label>Number of Columns</label>
             <input id={'numColumnSelector'} type={'number'} min={1} defaultValue={26}
-
+                onChange={()=>{}}
             />
             <button/>
 
@@ -48,15 +49,15 @@ const InfoDisplay = (props) => {
 
 const InteractiveGridLayer = (props) => {
 
-    const {imgWidth, imgHeight} = props;
+    const {imgWidth, imgHeight, mapNumRows, mapNumColumns} = props;
 
-    const numRows = 16;
-    const numColumns = 16;
+    //const mapNumRows = 16;
+    //const mapNumColumns = 16;
 
     const elements = [];
-    for (let r = 0; r < numRows; r++) {
+    for (let r = 0; r < mapNumRows; r++) {
         let newRow = [];
-        for (let c = 0; c < numColumns; c++) {
+        for (let c = 0; c < mapNumColumns; c++) {
             newRow.push(<GridElement r={r} c={c}/>)
         }
         elements.push(newRow);
@@ -66,11 +67,12 @@ const InteractiveGridLayer = (props) => {
         <div
             style={{
                 display: 'grid',
-                gridGap: '2px solid black',
+                gridGap: '1px solid black',
                 width: `${imgWidth}px`,
                 height: `${imgHeight}px`,
-                gridTemplateRows: `${numRows}`,
-                gridTemplateColumns: `${numColumns}`,
+                gridTemplateRows: `${mapNumRows}`,
+                gridTemplateColumns: `${mapNumColumns}`,
+                zIndex:'3',
 
             }}
         >
@@ -81,11 +83,13 @@ const InteractiveGridLayer = (props) => {
 
 const Grid = (props) => {
 
-    const {mapNumColumns, mapNumRows, setMainComponentSelection} = props;
+    const {selectedMap, mapNumRows, mapNumColumns} = useContext(ApplicationContext);
+
+    const { setMainComponentSelection} = props;
 
     const [imgWidth, setImgWidth] = useState(0);
     const [imgHeight, setImgHeight] = useState(0);
-    const [imgPath, setImgPath] = useState('/maps/gemstonecave16x16.jpg');
+    const [imgPath, setImgPath] = useState(`/maps/${selectedMap}`);
 
     const img = new Image();
     img.src = imgPath;
@@ -95,7 +99,7 @@ const Grid = (props) => {
 
     }
 
-    const gridLineWidth = 2;
+    const gridLineWidth = 1;
     const [squareHeight, setSquareHeight] = useState(59.5);
     const [squareWidth, setSquareWidth] = useState(59.5);
     const [gridElementArray, setGridElementArray] = useState([]);
@@ -142,11 +146,16 @@ const Grid = (props) => {
                     position: 'absolute',
                     zIndex: '-1',
                     top: '0px', left: '0px',
-                }}/>
+                    maxWidth:'85%', maxHeight:'100%',
+                    overflow:'scroll'
+                    }}/>
             <InteractiveGridLayer
                 imgWidth={imgWidth}
                 imgHeight={imgHeight}
+                mapNumRows={mapNumRows}
+                mapNumColumns={mapNumColumns}
             />
+            <GameMasterInfoNode/>
         </div>
     );
 }

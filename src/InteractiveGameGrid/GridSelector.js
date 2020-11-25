@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
+import ApplicationContext from "../ApplicationContext";
 
 const getMapNames = () => {
     return ['dotmm-level1.jpg', 'downeddragon.png', 'swamptown.png', 'screamingcauldron.png', 'gemstonecave16x16.jpg',
@@ -7,8 +8,8 @@ const getMapNames = () => {
 
 const MapSelectorElement = (props) => {
 
-    const {mapName, setSelectedMap} = props;
-
+    const {mapName} = props;
+    const {setSelectedMap} = useContext(ApplicationContext);
     const imgPath = `/maps/${mapName}`
 
     const [bgColor, setBgColor] = useState('white')
@@ -81,6 +82,7 @@ const MapSelector = (props) => {
 
 const MapPreviewAndOptions = (props) => {
 
+    const {selectedMap} = useContext(ApplicationContext);
     const {
         setMainComponentSelection,
         setMapConfigurationSettings,
@@ -89,7 +91,6 @@ const MapPreviewAndOptions = (props) => {
         setMapNumRows,
         mapNumColumns,
         setMapNumColumns,
-        selectedMap,
     } = props;
 
     return (
@@ -159,16 +160,16 @@ const MapPreviewAndOptions = (props) => {
 
                 </table>
             </div>
-            <img //src={'maps/downeddragon.png'}
-                src={`maps/${props.selectedMap}`}
-                 alt={' '}
-                 style={{
-                     maxHeight: '100%',
-                     maxWidth: '100%',
-                     display: "inline-block",
-                     width: '80%',
-                     height: '100%',
-                 }}
+            <img
+                src={`maps/${selectedMap}`}
+                alt={' '}
+                style={{
+                    maxHeight: '100%',
+                    maxWidth: '100%',
+                    display: "inline-block",
+                    width: '80%',
+                    height: '100%',
+                }}
             />
 
         </div>
@@ -177,15 +178,13 @@ const MapPreviewAndOptions = (props) => {
 
 const GridSelector = (props) => {
 
+    const {setSelectedMap,
+    setMainComponentSelection,
+    mapNumColumns,
+    setMapNumColumns,
+    mapNumRows,
+    setMapNumRows,} = useContext(ApplicationContext)
 
-    const {
-        setSelectedMap,
-        setMainComponentSelection,
-        mapNumColumns,
-        setMapNumColumns,
-        mapNumRows,
-        setMapNumRows,
-    } = props;
 
     return (
         <div
