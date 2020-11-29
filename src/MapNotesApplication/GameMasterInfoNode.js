@@ -4,7 +4,10 @@ import InteractiveMapContext from "./InteractiveMapContext";
 
 const GameMasterInfoNode = (props) => {
 
-    const {hoveredNodes, setHoveredNodes} = useContext(InteractiveMapContext);
+    //todo: displayText and setDisplayText may achieve the original goal of hoveredNodes and
+    //setHoveredNodes. Review code
+    const {hoveredNodes, setHoveredNodes, displayNodeId,
+        updateDisplayTextById,} = useContext(InteractiveMapContext);
 
     const [allowableAxis, setAllowableAxis] = useState('both')
     const nodeRef = useRef(null);
@@ -23,21 +26,15 @@ const GameMasterInfoNode = (props) => {
         const draggableScrollOffsetX = document.getElementById('mapDisplayWrapperDiv').scrollLeft;
         const absolutePosition = dragElement.node.getBoundingClientRect().x;
 
-
-        console.log(draggableScrollOffsetX + absolutePosition);
     };
 
     return (
 
         <Draggable
-            //defaultPosition={{x: 25, y: 25}}
             axis={allowableAxis}
             bounds={{right: imgWidth, bottom: imgHeight,left:-xPos , top:-yPos}}
-            //bounds={'parent'}
             nodeRef={nodeRef}
             handle={`#${id}`}
-            // onStart={handleStart}
-            // onDrag={handleDrag}
             onStop={handleStop}
         >
             <div
@@ -57,8 +54,14 @@ const GameMasterInfoNode = (props) => {
                     top: `${yPos}px`,
                     left: `${xPos}px`,
                 }}
+                //todo: update editor text to reflect the selected nodes' data,
+                //AND wire up the state of the node data to the editor directly,
+                //such that changes to the editor automatically save top the nodes' data.
                 onMouseOver={()=>{
-                    setHoveredNodes(hoveredNodes.concat(GMINDataIndex))
+                    setHoveredNodes(hoveredNodes.concat(GMINDataIndex));
+                    updateDisplayTextById(GMINDataIndex)
+
+
                 }}
                 onMouseOut={()=>{
                     let tempArr = [...hoveredNodes];

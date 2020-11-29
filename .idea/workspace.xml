@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2155c8ac-607d-4945-8ab9-f78f5b3c2d2d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DraggableDemo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MapNotesApplication/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MapNotesApplication/GameMasterInfoDisplay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MapNotesApplication/GameMasterInfoNode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MapNotesApplication/InfoNodeEditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MapNotesApplication/InteractiveMapContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MapNotesApplication/MapDisplay.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GlobalTesting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GlobalTesting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InteractiveGameGrid/Grid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GridSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InteractiveGameGrid/GridSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MapNotesApplication/GameMasterInfoNode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MapNotesApplication/GameMasterInfoNode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MapNotesApplication/InfoNodeEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MapNotesApplication/InfoNodeEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MapNotesApplication/MapDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MapNotesApplication/MapDisplay.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +107,8 @@
       <workItem from="1605815730228" duration="25002000" />
       <workItem from="1606065290651" duration="3217000" />
       <workItem from="1606150380451" duration="20847000" />
-      <workItem from="1606260403703" duration="2767000" />
+      <workItem from="1606260403703" duration="2835000" />
+      <workItem from="1606449487111" duration="5370000" />
     </task>
     <task id="LOCAL-00001" summary="Display Grid with Prop Drilling&#10;Next, replacing with Global Context">
       <created>1605916338979</created>
@@ -127,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605916338979</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implementing hover node functionality, stepping away from grid functions for now.">
+      <created>1606280892731</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606280892731</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +133,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Display Grid with Prop Drilling&#10;Next, replacing with Global Context" />
-    <option name="LAST_COMMIT_MESSAGE" value="Display Grid with Prop Drilling&#10;Next, replacing with Global Context" />
+    <MESSAGE value="Implementing hover node functionality, stepping away from grid functions for now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing hover node functionality, stepping away from grid functions for now." />
   </component>
   <component name="WindowStateProjectService">
     <state x="618" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606163573993">
@@ -148,30 +146,30 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1605916523046" />
-    <state x="585" y="91" key="CommitChangelistDialog2" timestamp="1605916338070">
+    <state x="585" y="91" key="CommitChangelistDialog2" timestamp="1606280891264">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="585" y="91" key="CommitChangelistDialog2/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1605916338070" />
-    <state width="1877" height="297" key="GridCell.Tab.0.bottom" timestamp="1606260389132">
+    <state x="585" y="91" key="CommitChangelistDialog2/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1606280891264" />
+    <state width="1877" height="62" key="GridCell.Tab.0.bottom" timestamp="1606682515245">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1237" height="30" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605804307983" />
-    <state width="1877" height="297" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1606260389132" />
-    <state width="1877" height="297" key="GridCell.Tab.0.center" timestamp="1606260389131">
+    <state width="1877" height="62" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1606682515245" />
+    <state width="1877" height="62" key="GridCell.Tab.0.center" timestamp="1606682515244">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1237" height="30" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605804307983" />
-    <state width="1877" height="297" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1606260389131" />
-    <state width="1877" height="297" key="GridCell.Tab.0.left" timestamp="1606260389131">
+    <state width="1877" height="62" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1606682515244" />
+    <state width="1877" height="62" key="GridCell.Tab.0.left" timestamp="1606682515244">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1237" height="30" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605804307983" />
-    <state width="1877" height="297" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1606260389131" />
-    <state width="1877" height="297" key="GridCell.Tab.0.right" timestamp="1606260389131">
+    <state width="1877" height="62" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1606682515244" />
+    <state width="1877" height="62" key="GridCell.Tab.0.right" timestamp="1606682515245">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1237" height="30" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605804307983" />
-    <state width="1877" height="297" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1606260389131" />
+    <state width="1877" height="62" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1606682515245" />
     <state x="746" y="227" key="RollbackChangesDialog" timestamp="1605916622810">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -180,14 +178,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="122" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1605814738238" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605916342544">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1606280896493">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1605916342544" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1605835295011">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1606280896493" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1606451174811">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1605835295011" />
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/-1920.768.1920.1050/-1366.0.1366.738@0.0.1920.1050" timestamp="1606451174811" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1606167126672">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
